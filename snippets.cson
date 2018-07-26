@@ -1,0 +1,30 @@
+'.source.js':
+  'New Component':
+    'prefix': 'compy'
+    'body': """
+      import { h } from 'react-hyperscript-helpers';
+      import styled from 'styled-components';
+      import { connect } from 'react-redux';
+      import { get } from 'lodash';
+
+      export function ${1:ComponentName}({ ${2:props} }) {
+
+      }
+
+      function mapStateToProps(state) {
+        return {
+          ${2:props}
+        };
+      }
+
+      export const ${1:ComponentName}Conn = connect(mapStateToProps)(${1:ComponentName});
+    """
+  'Import from':
+    'prefix': 'impy'
+    'body': 'import { ${1:things} } from \'${2:place}\''
+  'Package deconstruction':
+    'prefix': 'impas'
+    'body': """
+      import { ${1:/upcase} from ${1:/upcase} } from '@trove/somethings';
+    """
+
